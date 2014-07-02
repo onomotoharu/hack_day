@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xml:lang="ja" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width initial-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/shake.css"/>
+	<script src="js/jquery-2.0.2.min.js"></script>
+	<script src="js/websocketio.js"></script>
+	<!-- Country map -->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<script src="js/datamaps.world.min.js"></script>
+	<!-- Heat map -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization"></script>
+	<script src="js/heatmap.js"></script>
+	<script src="js/shake.js"></script>
+	<script src="js/index.js"></script>
+
+	
+	<script type="text/javascript">
+		$(function() {
+			$('.box3').on('click',function(){
+				$(".shake_emotion").animate({opacity:0},550);
+				$(".box2").animate({marginTop:-500, height:500},400);
+				$(".shakephone_min").animate({opacity:100},550);
+			});
+			$('.box1').on('click',function(){
+				$(".box2").animate({marginTop:0, height:0},400);
+				$(".shake_emotion").animate({opacity:100},550);
+				$(".shakephone_min").animate({opacity:0},550);
+			});
+
+		});
+	</script>
+	
+</head>
+<body>
+	<div class="wrapper">
+		<div class="contents">
+		
+			<div class="box1">
+				<div class="shakephone_min">
+					<img src="img/shake_min.png">
+				</div>
+				<div class="shakephone">
+					<img src="img/shake.png">
+				</div>
+			</div>
+			
+			<div class="box2">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<section id="slide01" class="swiper-slide">
+							<div id="basic_choropleth">
+								<div id="countrymap"></div>
+							</div>
+							<div class="expText"><p>User's country</p></div>
+						</section>
+						<section id="slide02" class="swiper-slide">
+							<p class="imgCountry"><img src="img/mockup-rank.png" height="272" width="291" /></p>
+							<div class="expText"><p>Country Ranking</p></div>
+						</section>
+						<section id="slide03" class="swiper-slide">
+							<div id="heatmap"></div>
+							<div class="expText"><p>User's location</p></div>
+						</section>
+					</div>
+					<div class="pagination"></div>
+				</div>
+			</div>
+			
+			<div class="box3">
+				<div class="shake_emotion">
+					<img src="img/shake_emotions.png">
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<!-- JS -->
+	<script src="js/countrymap.js"></script>
+	<script src="js/idangerous.swiper-2.1.min.js"></script>
+	<script>
+		var mySwiper = new Swiper('.swiper-container',{
+			pagination: '.pagination',
+			paginationClickable: true
+		})
+	</script>
+</body>
+</html>

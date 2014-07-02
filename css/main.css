@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */ 
+*{
+	margin:0;
+	padding: 0;
+	-webkit-appearance: none;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	background-color: #DFDFE0;
+}
+
+#top-wrapper {
+	font-family: 'Quattrocento Sans', sans-serif;
+}
+
+#header {
+	height: 21px;
+	background-color: #525252;
+}
+
+#title-box {
+	width: 100%;
+	height: 200px;
+	background-image:url(../img/logo_min.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#caption {
+	padding: 80px 0 80px 0;
+	font-size: 17px;
+	color: rgb(150,150,150);
+	text-align: center;
+}
+
+#button {
+	font-size: 90%;
+	text-align: center;
+	color: rgb(230,230,230);
+}
+
+#select-box, #go-btn {
+	width: 100%;
+	height: 50px;
+	background-color: #DC5A44;
+}
+
+#select-box {
+	float: left;
+	width: 40%;
+	padding: 0 5% 0 5%;
+	border-right: 1px solid #fdfdfd;
+	font-size: 16px;
+}
+
+#countryselect {
+	width: auto;
+	text-align: center;
+	color: #fbfbfb;
+}
+
+#go-btn {
+	height: 50px;
+}
+
+#go-btn a {
+	display: block;
+	color: #fbfbfb;
+	font-size: 18px;
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;
+}
+
+.fa-flag {
+	position: absolute;
+	margin: 16px 0 0 108px;
+	color: #fbfbfb;
+	font-size: 18px;
+}
+
+#countryselect {
+	text-align: center;
+	font-family: Helvetica;
+	-webkit-appearance: button;
+   -moz-appearance: button;
+   appearance: button;
+   border-radius:0px;
+   text-align: center;
+	width: 100%;
+	height: 50px;
+	border:none;
+	background-color: #DC5A44;
+	background-size: cover;
+	outline: 0;
+}

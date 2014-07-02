@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xml:lang="ja" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="font/font-awesome/css/font-awesome.min.css">
+		<script src="js/jquery-2.0.2.min.js"></script>
+		<script src="js/websocketio.js"></script>
+		<script src="js/index.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				$('a').click(function(){
+					location.href = $(this).attr('href');
+					return false;
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<article id="top-wrapper">
+		
+			<!-- full screen demo用に黒headerを確保 -->
+			<div id="header"></div>
+			
+			<div id="title-box">
+				<h1 id="cole" style="display: none;">Cole</h1>
+			</div>
+			
+			<p id="caption">Visualizes your emotion.</p>
+			
+			<!-- select country -->
+			<div id="select-box">
+				<i class="fa fa-flag"></i>
+				<select id="countryselect" name="countryList" onchange="changeSelect()">
+					<option selected disabled>Select country</option>
+					<option value="JPN">Nippon</option>
+					<option value="USA">United States</option>
+					<option value="GRB">England</option>
+					<option value="FRA">France</option>
+					<option value="DEU">Germany</option>
+					<option value="ITA">Italy</option>
+					<option value="CAN">Canada</option>
+					<option value="RUS">Russia</option>
+					<option value="CHN">China</option>
+					<option value="IND">India</option>
+					<option value="BRA">Brazil</option>
+					<option value="MEX">Mexico</option>
+					<option value="ZAF">Sounth Africa</option>
+					<option value="AUS">Australia</option>
+					<option value="KOR">Korea</option>
+					<option value="IDN">Indonesia</option>
+					<option value="SAU">Saudi Arabia</option>
+					<option value="TUR">Turkey</option>
+					<option value="ARG">Argentine</option>
+					<option value="JPN">Gunma</option>
+				</select>
+			</div>
+
+			<!-- Go! button -->
+			<div id="go-btn">
+				<a href="shake.html">Go! <i class="fa fa-hand-o-right"></i></a>
+			</div>
+		</article>
+	</body>
+	
+</html>
